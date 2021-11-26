@@ -2,8 +2,6 @@
 const clock = document.body.querySelector(".clock");
 const toDay = document.body.querySelector(".today");
 
-//
-
 // 요일 구하기 위한 주
 
 const week = ["월", "화", "수", "목", "금", "토", "일"];
