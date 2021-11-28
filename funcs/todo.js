@@ -17,12 +17,12 @@ const deleteTodos = (e) => {
   saveTodos();
 };
 
-const putTodos = (todo) => {
+const putTodos = (todoObj) => {
   const li = document.createElement("li");
-  li.id = todo.id;
+  li.id = todoObj.id;
   const span = document.createElement("span");
   li.appendChild(span);
-  span.innerText = todo.text;
+  span.innerText = todoObj.text;
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteTodos);
@@ -34,6 +34,7 @@ const putTodos = (todo) => {
 const submitTodo = (e) => {
   e.preventDefault();
   const todo = todoInput.value;
+
   todoInput.value = "";
   const todoObj = {
     text: todo,
